@@ -580,7 +580,7 @@ label {
 .multi-step .progtrckr li:after {
 	content: "";
 	position: absolute;
-	z-index: -1;
+	z-index: 0;
 	top: 14px;
 	left: 0;
 	width: 100vw;
@@ -594,6 +594,7 @@ label {
 	background-color: #ccc
 }
 .multi-step .progtrckr li em {
+	position:relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -605,7 +606,8 @@ label {
 	font-size: 14px;
 	font-weight: 700;
 	font-style: normal;
-	line-height: 14px
+	line-height: 14px;
+	z-index:1
 }
 .multi-step .progtrckr li.progtrckr-todo em {
 	background-color: #ccc
@@ -658,7 +660,8 @@ label {
 .flex--two-col>* {
 	flex: 0 0 100%;
 	width: calc(100% - 20px);
-	margin: 10px
+	margin: 10px;
+	max-height: 380px; /*to reduce white space between top part and selection area*/
 }
 @media screen and (min-width:980px) {
 	.flex--two-col>* {
